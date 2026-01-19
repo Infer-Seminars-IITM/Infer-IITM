@@ -1,43 +1,61 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  background: #f5f7fa;
+  color: #1f2937;
+  line-height: 1.6;
 }
 
+/* Prevent long words from breaking layout */
+main, .seminar-card {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Header */
 header {
   background: #003366;
   color: white;
-  padding: 20px;
+  padding: 24px;
   text-align: center;
 }
 
+/* Navigation bar */
 nav {
-  background: #f0f0f0;
-  padding: 10px;
+  background: white;
+  padding: 12px;
   text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 nav a {
   margin: 0 15px;
   text-decoration: none;
   color: #003366;
-  font-weight: bold;
+  font-weight: 600;
 }
 
+/* Main content area */
 main {
-  padding: 20px;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 16px;
 }
 
+/* Seminar card */
 .seminar-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-top: 10px;
-  border-radius: 5px;
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+/* Footer */
 footer {
-  margin-top: 30px;
-  padding: 10px;
+  margin-top: 40px;
+  padding: 14px;
   background: #003366;
   color: white;
   text-align: center;
