@@ -13,44 +13,24 @@
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="seminar-deeplearning.html">Full Page View</a>
 </nav>
 
-<main>
-
-  <div class="seminar-card" onclick="openModal()">
-    <img src="prof_kumar.jpg" class="speaker-photo" alt="Dr. Kumar">
-    <h3>Deep Learning for Science</h3>
-    <p><strong>Speaker:</strong> Dr. A. Kumar (IIT)</p>
-    <p><strong>Date:</strong> 5 Feb 2026, 4:00 PM</p>
-    <p>Click to read more</p>
-  </div>
-
+<main id="seminarContainer">
+  <!-- Cards will be inserted here automatically -->
 </main>
 
-<!-- MODAL DETAIL PANEL -->
+<!-- Modal -->
 <div id="seminarModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal()">✕</span>
 
-    <h2>Deep Learning for Science</h2>
-    <p><strong>Speaker:</strong> Dr. A. Kumar, IIT</p>
-    <p><strong>Date:</strong> 5 February 2026, 4:00 PM</p>
-    <p><strong>Venue:</strong> Seminar Hall A</p>
+    <h2 id="modalTitle"></h2>
+    <p id="modalSpeaker"></p>
+    <p id="modalDate"></p>
+    <p id="modalVenue"></p>
+    <p id="modalFull"></p>
 
-    <p>
-      This seminar explores how modern deep learning models are being used
-      for scientific discovery, simulation, and modeling in physics,
-      chemistry, and engineering.
-    </p>
-
-    <p><strong>Links:</strong></p>
-    <ul>
-      <li><a href="https://iit.ac.in" target="_blank">Professor Homepage</a></li>
-      <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li>
-      <li><a href="https://zoom.us" target="_blank">Join on Zoom</a></li>
-    </ul>
-
+    <div id="modalLinks"></div>
   </div>
 </div>
 
