@@ -9,59 +9,55 @@
 
 <header>
   <h1>Institution Seminar Series</h1>
-  <p>Upcoming talks, lectures, and invited seminars</p>
 </header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="seminars.html">All Seminars</a>
-  <a href="past.html">Past Seminars</a>
+  <a href="seminar-deeplearning.html">Full Page View</a>
 </nav>
 
 <main>
-  <h2>Upcoming Seminar</h2>
 
-  <div class="seminar-card">
+  <div class="seminar-card" onclick="openModal()">
+    <img src="prof_kumar.jpg" class="speaker-photo" alt="Dr. Kumar">
     <h3>Deep Learning for Science</h3>
-    <p><strong>Speaker:</strong> Dr. A. Kumar, IIT</p>
-    <p><strong>Date:</strong> 5 February 2026</p>
-    <p><strong>Time:</strong> 4:00 PM</p>
-    <p><strong>Venue:</strong> Seminar Hall A</p>
-    <p>
-      This talk discusses recent advances in Deep learning for
-      scientific discovery and simulation.
-    </p>
-  </div>
-
-  <div class="seminar-card">
-    <h3>Machine Learning</h3>
-    <p><strong>Speaker:</strong> Dr. Kishor, IIT</p>
-    <p><strong>Date:</strong> 6 February 2026</p>
-    <p><strong>Time:</strong> 11:00 AM</p>
-    <p><strong>Venue:</strong> Seminar Hall A</p>
-    <p>
-      This talk discusses recent advances in fast machine learning 
-      algorithms used in edge AI.
-    </p>
-  </div>
-
-   <div class="seminar-card">
-    <h3>Reinforcement Learning</h3>
-    <p><strong>Speaker:</strong> Dr. P. Nirav Sonu, IIT</p>
-    <p><strong>Date:</strong> 8 February 2026</p>
-    <p><strong>Time:</strong> 1:00 PM</p>
-    <p><strong>Venue:</strong> Seminar Hall B</p>
-    <p>
-      This talk discusses recent advances in reinforcement learning for
-      autonomous systems like UAVs.
-    </p>
+    <p><strong>Speaker:</strong> Dr. A. Kumar (IIT)</p>
+    <p><strong>Date:</strong> 5 Feb 2026, 4:00 PM</p>
+    <p>Click to read more</p>
   </div>
 
 </main>
+
+<!-- MODAL DETAIL PANEL -->
+<div id="seminarModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">✕</span>
+
+    <h2>Deep Learning for Science</h2>
+    <p><strong>Speaker:</strong> Dr. A. Kumar, IIT</p>
+    <p><strong>Date:</strong> 5 February 2026, 4:00 PM</p>
+    <p><strong>Venue:</strong> Seminar Hall A</p>
+
+    <p>
+      This seminar explores how modern deep learning models are being used
+      for scientific discovery, simulation, and modeling in physics,
+      chemistry, and engineering.
+    </p>
+
+    <p><strong>Links:</strong></p>
+    <ul>
+      <li><a href="https://iit.ac.in" target="_blank">Professor Homepage</a></li>
+      <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li>
+      <li><a href="https://zoom.us" target="_blank">Join on Zoom</a></li>
+    </ul>
+
+  </div>
+</div>
 
 <footer>
   Contact: seminars@yourinstitution.edu
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
