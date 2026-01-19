@@ -6,7 +6,7 @@
       "speaker": "Dr. A. Kumar, IIT",
       "date": "2026-02-05T16:00:00",
       "venue": "Seminar Hall A",
-      "photo": "prof_kumar.jpg",
+      "photo": "person-dummy.jpg",
       "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
       "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
       "links": {
