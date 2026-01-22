@@ -17,6 +17,7 @@ main,
   margin-right: auto;
 }
 
+/*========================NAV========================*/
 nav {
   background: white;
   padding: 12px 5%;
@@ -49,6 +50,7 @@ nav a:hover::after {
   width: 100%;
 }
 
+/*========================HEADER========================*/
 .header-bar {
   display: flex;
   align-items: center;
@@ -59,11 +61,11 @@ nav a:hover::after {
 }
 
 .logo {
-  height: 120px;
+  height: 100px;
   width: auto;
 }
 
-/* Grid layout for cards */
+/*========================CARD========================*/
 main {
   margin: 24px auto;
   padding: 16px 5%;
@@ -72,7 +74,6 @@ main {
   gap: 16px;
 }
 
-/* Horizontal seminar card */
 .seminar-card {
   background: white;
   border-radius: 10px;
@@ -87,13 +88,11 @@ main {
   cursor: pointer;
 }
 
-/* Put image on the right */
 .seminar-card img {
   margin-left: auto;           /* pushes photo to the right */
   margin-right: 10%;
 }
 
-/* Speaker photo */
 .speaker-photo {
   width: 90px;
   height: 90px;

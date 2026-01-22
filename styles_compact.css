@@ -1,0 +1,185 @@
+/*========================BASE========================*/
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #1f2937;
+  line-height: 1.45;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.section-label {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*========================NAV========================*/
+nav {
+  background: white;
+  padding: 15px 6%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+nav a {
+  margin-right: 14px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #003366;
+  transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/*========================HEADER========================*/
+.header-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #003366;
+  color: white;
+  padding: 20px 4%;
+}
+
+.header-bar h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.logo {
+  height: 100px;
+}
+
+/*========================SECTION LABEL========================*/
+.section-label {
+  font-size: 20px;
+  /* font-weight: 600; */
+  color: #003366;
+  margin: 16px auto 6px;
+  padding: 10px 4%;
+}
+
+/*========================CARDS========================*/
+main {
+  padding: 20px 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.seminar-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.seminar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+.seminar-card h3 {
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+
+.seminar-card p {
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.seminar-card img {
+  margin-left: auto;
+}
+
+.speaker-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/*========================MODAL========================*/
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+/*========================FOOTER========================*/
+footer {
+  margin-top: auto;
+  padding: 10px;
+  background: #003366;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+
+/*========================RESPONSIVE========================*/
+@media (max-width: 1100px) {
+
+  .seminar-card {
+    flex-direction: column;   /* stack photo on top */
+    align-items: flex-start;  /* align text left */
+  }
+
+  .seminar-card img {
+    order: -1;
+    margin-left: 0;           /* remove right push */
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
