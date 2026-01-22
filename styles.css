@@ -10,10 +10,17 @@ body {
   flex-direction: column;
 }
 
+main,
+.section-label {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 nav {
   background: white;
-  padding: 12px 100px;   /* extra left padding */
-  text-align: left;     /* <-- aligns items left */
+  padding: 12px 5%;
+  text-align: left;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
@@ -48,7 +55,7 @@ nav a:hover::after {
   gap: 16px;
   background: #003366;
   color: white;
-  padding: 20px 50px;
+  padding: 20px 5%;
 }
 
 .logo {
@@ -58,9 +65,8 @@ nav a:hover::after {
 
 /* Grid layout for cards */
 main {
-  /* max-width: 960px; */
-  margin: 24px 100px;
-  padding: 16px;
+  margin: 24px auto;
+  padding: 16px 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
@@ -98,8 +104,8 @@ main {
 
 .section-label {
   color: #003366;      /* institutional blue */
-  font-size: 20px;
-  margin: 20px 100px -10px;
+  margin: 20px auto -10px;
+  padding: 0 5%;
 }
 
 /* Modal overlay */
