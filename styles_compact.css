@@ -13,7 +13,7 @@ body {
 
 main,
 .section-label {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -21,11 +21,10 @@ main,
 nav {
   background: white;
   padding: 15px 6%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 nav a {
-  margin-right: 14px;
+  margin-right: 30px;
   text-decoration: none;
   color: #003366;
   font-weight: 600;
@@ -72,13 +71,98 @@ nav a:hover::after {
   font-size: 20px;
   /* font-weight: 600; */
   color: #003366;
-  margin: 16px auto 6px;
+  margin: 16px 7% 10px;
   padding: 10px 4%;
 }
 
+/*========================FEATURED SEMINAR (OPEN LAYOUT)========================*/
+.featured-seminar {
+  max-width: 1280px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 32px;
+  cursor: pointer;
+}
+
+/* Thumbnail on RIGHT */
+.featured-poster {
+  width: 600px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text block */
+.featured-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title slightly lower than center */
+.featured-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 10px;   /* key adjustment */
+  margin-bottom: 20px;
+}
+
+/* Speaker more prominent */
+.featured-speaker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.featured-speaker img {
+  width: 100px;        /* bigger speaker image */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Meta stays subtle */
+.featured-meta {
+  font-size: 14px;
+  /* color: #374151; */
+  color: #475569;
+}
+
+/* Abstract unchanged */
+.featured-abstract {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: 88%;
+}
+
+/* Video link unchanged */
+.featured-video-link {
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .featured-seminar {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-right {
+    padding-left: 0;
+  }
+
+  .featured-abstract {
+    max-width: 100%;
+  }
+}
+
+
 /*========================CARDS========================*/
 main {
-  padding: 20px 4%;
+  padding: 24px 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
@@ -87,8 +171,8 @@ main {
 .seminar-card {
   background: white;
   border-radius: 8px;
-  padding: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 
   display: flex;
   align-items: center;
@@ -109,7 +193,7 @@ main {
 }
 
 .seminar-card p {
-  font-size: 13px;
+  font-size: 14px;
   margin: 2px 0;
 }
 
@@ -118,8 +202,8 @@ main {
 }
 
 .speaker-photo {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -143,7 +227,7 @@ main {
 .modal-content {
   background: white;
   width: 90%;
-  max-width: 520px;
+  max-width: 720px;
   border-radius: 10px;
   padding: 16px;
 }

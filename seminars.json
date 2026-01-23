@@ -1,94 +1,23 @@
 {
   "seminars": [
     {
-      "id": "deeplearning-2026-02-05",
-      "name": "Deep Learning for Science",
-      "speaker": "Dr. A. Kumar, IIT",
+      "id": "1",
+      "name": "From Noise To Data: A Tutorial On Diffusion Models",
+      "speaker": "Dr. Krishna Narayanan",
+      "profile": "Sanchez Chair Professor in ECE at Texas A&M University",
+
       "date": "2026-02-05T16:00:00",
       "venue": "Seminar Hall A",
-      "photo": "images/dummy.jpg",
-      "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
-      "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
-      "links": {
-        "homepage": "https://iit.ac.in",
-        "google_scholar": "https://scholar.google.com",
-        "zoom": "https://zoom.us"
-      }
-    },
-    {
-      "id": "deeplearning-2026-02-05",
-      "name": "Deep Learning for Science",
-      "speaker": "Dr. A. Kumar, IIT",
-      "date": "2026-02-05T16:00:00",
-      "venue": "Seminar Hall A",
-      "photo": "images/dummy.jpg",
-      "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
-      "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
-      "links": {
-        "homepage": "https://iit.ac.in",
-        "google_scholar": "https://scholar.google.com",
-        "zoom": "https://zoom.us"
-      }
-    },
-    {
-      "id": "deeplearning-2026-02-05",
-      "name": "Deep Learning for Science",
-      "speaker": "Dr. A. Kumar, IIT",
-      "date": "2026-02-05T16:00:00",
-      "venue": "Seminar Hall A",
-      "photo": "images/dummy.jpg",
-      "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
-      "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
-      "links": {
-        "homepage": "https://iit.ac.in",
-        "google_scholar": "https://scholar.google.com",
-        "zoom": "https://zoom.us"
-      }
-    },
-    {
-      "id": "deeplearning-2026-02-05",
-      "name": "Deep Learning for Science",
-      "speaker": "Dr. A. Kumar, IIT",
-      "date": "2026-02-05T16:00:00",
-      "venue": "Seminar Hall A",
-      "photo": "images/dummy.jpg",
-      "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
-      "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
-      "links": {
-        "homepage": "https://iit.ac.in",
-        "google_scholar": "https://scholar.google.com",
-        "zoom": "https://zoom.us"
-      }
-    },
-    {
-      "id": "deeplearning-2026-02-05",
-      "name": "Deep Learning for Science",
-      "speaker": "Dr. A. Kumar, IIT",
-      "date": "2026-02-05T16:00:00",
-      "venue": "Seminar Hall A",
-      "photo": "images/dummy.jpg",
-      "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
-      "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
-      "links": {
-        "homepage": "https://iit.ac.in",
-        "google_scholar": "https://scholar.google.com",
-        "zoom": "https://zoom.us"
-      }
-    },
-    {
-      "id": "deeplearning-2026-02-05",
-      "name": "Deep Learning for Science",
-      "speaker": "Dr. A. Kumar, IIT",
-      "date": "2026-02-05T16:00:00",
-      "venue": "Seminar Hall A",
-      "photo": "images/dummy.jpg",
-      "short_abstract": "Recent advances in machine learning for scientific discovery and simulation.",
-      "full_content": "This seminar explores how modern deep learning models are being used for scientific discovery, simulation, and modeling in physics, chemistry, and engineering. Topics include neural operators, surrogate modeling, and data-driven PDE solvers.",
+      "photo": "images/prof1.jpg",
+      "short_abstract": "Diffusion models are a powerful generative framework that transforms complex data into simple distributions through a forward noise process and generates data via a learned reverse denoising process. This tutorial presents a first-principles introduction to discrete-time diffusion models, covering training objectives, parameterization, and sampling methods. It emphasizes intuition and theoretical connections to equip readers to critically engage with current research and applications.",
+      "full_content": "Diffusion models have recently emerged as a powerful and unifying framework for generative modeling, achieving state-of-the-art performance across a wide range of domains including images, audio, and structured signals. This tutorial offers a systematic introduction to diffusion models, developed from first principles and requiring only a basic background in probability and estimation. We begin by describing the forward process which transforms complex data distributions into simple reference distributions, such as a Gaussian, through a sequence of noise-injection steps. Generative modeling is described as the reverse diffusion process implemented as a sequence of denoising operations.\n\n The tutorial focuses on discrete-time diffusion models and their algorithmic realization, including training objectives, parameterization choices, and sampling procedures. Throughout, we emphasize intuition, modeling assumptions, and computational considerations, and draw connections to classical ideas in estimation theory and probability. The aim is to equip students with a clear conceptual understanding of diffusion models, enabling them to read current literature critically and apply these ideas to new scientific and engineering problems.",
+      "thumbnail": "images/image.png",
+      "videoEmbed": "https://www.youtube.com/embed/zobzbnH9-YU",
       "links": {
         "homepage": "https://iit.ac.in",
         "google_scholar": "https://scholar.google.com",
         "zoom": "https://zoom.us"
       }
     }
-  ]
+    ]
 }

@@ -10,6 +10,40 @@ fetch(basePath + "seminars.json")
     return res.json();
   })
   .then(data => {
+    // most recent seminar
+    const featured = data.seminars[0];
+    const featuredDiv = document.getElementById("featuredSeminar");
+
+    featuredDiv.innerHTML = `
+      <img 
+        src="${basePath + featured.thumbnail}" 
+        class="featured-poster" 
+        alt="Seminar Poster">
+
+      <div class="featured-content">
+        <div class="featured-title">${featured.name}</div>
+
+        <div class="featured-speaker">
+          <img 
+            src="${basePath + featured.photo}" 
+            alt="${featured.speaker}">
+          <div>
+            <strong>${featured.speaker}</strong>
+            <div class="featured-meta">
+              ${featured.profile}
+              ${new Date(featured.date).toLocaleString()} · ${featured.venue}
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-abstract">
+          ${featured.short_abstract}
+        </div>
+      </div>
+    `;
+    featuredDiv.onclick = () => openModal(featured, basePath);
+
+    // seminar cards
     const container = document.getElementById("seminarContainer");
     container.innerHTML = "";
 
