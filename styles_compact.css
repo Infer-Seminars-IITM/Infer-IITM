@@ -66,13 +66,31 @@ nav a:hover::after {
   height: 100px;
 }
 
+.introduction {
+  margin: 20px 8.5%;
+  padding: 10px 4%;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #232f43;
+}
+
 /*========================SECTION LABEL========================*/
 .section-label {
   font-size: 20px;
   /* font-weight: 600; */
   color: #003366;
-  margin: 16px 7% 10px;
+  margin: 16px 7%;
   padding: 10px 4%;
+}
+
+.section-divider {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  margin: 28px auto;
+  background-color: #d1d5db; /* neutral gray */
 }
 
 /*========================FEATURED SEMINAR (OPEN LAYOUT)========================*/
@@ -114,9 +132,12 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 16px;
+  font-size: 16px;    /* slightly bigger */
 }
-
+.featured-speaker:hover .speaker-name {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .featured-speaker img {
   width: 100px;        /* bigger speaker image */
   height: 100px;
@@ -127,8 +148,7 @@ nav a:hover::after {
 /* Meta stays subtle */
 .featured-meta {
   font-size: 14px;
-  /* color: #374151; */
-  color: #475569;
+  color: #374151;
 }
 
 /* Abstract unchanged */
