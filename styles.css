@@ -218,6 +218,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+  min-height: 60vh;          /* keep page height stable when few results */
+  align-content: start;      /* avoid stretching cards when space is tall */
 }
 
 .seminar-card {
@@ -271,6 +273,48 @@ main {
   object-fit: cover;
   flex-shrink: 0;
 }
+/*Search*/
+.seminar-search {
+  max-width: 1280px;
+  margin: 0 auto 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.seminar-search input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  width: 400px;
+}
+
+.seminar-search input:focus {
+  outline: 2px solid #003366;
+  outline-offset: 1px;
+}
+
+#searchCount {
+  color: #4b5563;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  color: #6b7280;
+}
+
 
 /*========================MODAL========================*/
 .modal {

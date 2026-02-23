@@ -11,6 +11,12 @@ const dateOpts = {
   timeZoneName: "short",
 };
 
+let seminarsData = [];
+const container = document.getElementById("seminarContainer");
+const searchInput = document.getElementById("seminarSearch");
+const searchCount = document.getElementById("searchCount");
+const featuredDiv = document.getElementById("featuredSeminar");
+
 function escapeHtml(str = "") {
   return String(str).replace(/[&<>"']/g, ch => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -23,6 +29,59 @@ function safeAbstract(text = "") {
 }
 
 
+function renderSeminars(list = []) {
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (!list.length) {
+    container.innerHTML = "<p class='no-results'>No seminars match your search.</p>";
+    return;
+  }
+
+  list.forEach(seminar => {
+    const card = document.createElement("div");
+    card.className = "seminar-card";
+    card.innerHTML = `
+      <div class="card-left">
+        <h3>${seminar.name}</h3>
+        <p class="card-date">${new Date(seminar.date).toLocaleString(undefined, dateOpts)}</p>
+        <p class="card-abstract clamp" data-full="${escapeHtml(seminar.short_abstract)}">
+          ${safeAbstract(seminar.short_abstract)}
+        </p>
+        <button class="read-more" type="button">Read more</button>
+      </div>
+      <div class="card-right">
+        <a href="${seminar.speaker_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+          <img src="${basePath + seminar.photo}" class="speaker-photo" alt="${seminar.speaker}" loading="lazy">
+        </a>
+        <div class="card-speaker">${seminar.speaker}</div>
+        ${seminar.youtube_url ? `<a class="youtube-cta" href="${seminar.youtube_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶</a>` : ""}
+      </div>
+    `;
+
+    const readBtn = card.querySelector(".read-more");
+    readBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      openModal(seminar, basePath);
+    });
+
+    container.appendChild(card);
+  });
+}
+
+function applySearch() {
+  const term = (searchInput?.value || "").trim().toLowerCase();
+  const filtered = term
+    ? seminarsData.filter(s => [s.name, s.speaker, s.venue, s.short_abstract]
+        .some(field => (field || "").toLowerCase().includes(term)))
+    : seminarsData;
+
+  renderSeminars(filtered);
+  if (searchCount) {
+    searchCount.textContent = term ? `${filtered.length} match${filtered.length === 1 ? "" : "es"}` : "";
+  }
+}
+
 fetch(basePath + "data/seminars.json")
   .then(res => {
     if (!res.ok) {
@@ -33,7 +92,6 @@ fetch(basePath + "data/seminars.json")
   .then(data => {
     // most recent seminar
     const featured = data.seminars[0];
-    const featuredDiv = document.getElementById("featuredSeminar");
 
     featuredDiv.innerHTML = `
       <img 
@@ -98,40 +156,11 @@ fetch(basePath + "data/seminars.json")
     };
 
     // seminar cards
-    const container = document.getElementById("seminarContainer");
-    container.innerHTML = "";
-
-    data.seminars.forEach(seminar => {
-      const card = document.createElement("div");
-      card.className = "seminar-card";
-
-      card.innerHTML = `
-        <div class="card-left">
-          <h3>${seminar.name}</h3>
-          <p class="card-date">${new Date(seminar.date).toLocaleString(undefined, dateOpts)}</p>
-          <p class="card-abstract clamp" data-full="${escapeHtml(seminar.short_abstract)}">
-            ${safeAbstract(seminar.short_abstract)}
-          </p>
-          <button class="read-more" type="button">Read more</button>
-        </div>
-        <div class="card-right">
-          <a href="${seminar.speaker_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
-            <img src="${basePath + seminar.photo}" class="speaker-photo" alt="${seminar.speaker}" loading="lazy">
-          </a>
-          <div class="card-speaker">${seminar.speaker}</div>
-          ${seminar.youtube_url ? `<a class="youtube-cta" href="${seminar.youtube_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶</a>` : ""}
-        </div>
-      `;
-
-      // card.onclick = () => openModal(seminar, basePath);
-      const readBtn = card.querySelector(".read-more");
-        readBtn.addEventListener("click", e => {
-          e.stopPropagation();
-          openModal(seminar, basePath);
-      });
-
-      container.appendChild(card);
-    });
+    seminarsData = data.seminars;
+    renderSeminars(seminarsData);
+    if (searchInput) {
+      searchInput.addEventListener("input", applySearch);
+    }
   })
   .catch(err => {
     document.getElementById("seminarContainer").innerHTML =
