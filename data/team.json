@@ -1,7 +1,7 @@
 [
-  { "name": "V. Aravind Rameshwar", "title": "Faculty Coordinator", "image": "images/team/arvind.jpg", "category": "faculty" },
-  { "name": "Bharadwaj Satchidanandan", "title": "Faculty Coordinator", "image": "images/team/bharadwaj.jpg", "category": "faculty" },
-  { "name": "J. Karthik Palaniappan", "title": "web dev", "image": "images/team/karthik.jpg", "category": "student" },
-  { "name": "Sumukha Kashyap", "title": "Organizer", "image": "images/team/sumukha.jpg", "category": "student" },
+  { "name": "V. Aravind Rameshwar", "title": "Faculty Coordinator", "image": "images/team/arvind.jpg", "category": "faculty", "url":"https://arvindrameshwar.github.io/"},
+  { "name": "Bharadwaj Satchidanandan", "title": "Faculty Coordinator", "image": "images/team/bharadwaj.jpg", "category": "faculty", "url":"https://sites.google.com/view/bsatchidanandan/home" },
+  { "name": "J. Karthik Palaniappan", "title": "web dev", "image": "images/team/karthik.jpg", "category": "student", "url":"https://www.linkedin.com/in/karthik-palaniappan-79b364234/" },
+  { "name": "Sumukha Kashyap", "title": "Organizer", "image": "images/team/sumukha.jpg", "category": "student", "url":"https://www.linkedin.com/in/sumukha-kashyap-741662ab/?originalSubdomain=in" },
   { "name": "Dinesh", "title": "Organizer", "image": "images/team/dummy.jpg", "category": "student" }
 ]

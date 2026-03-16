@@ -25,8 +25,13 @@ async function loadTeam() {
 }
 
 function makeCard(member) {
-  const card = document.createElement("div");
+  const card = document.createElement(member.url ? "a" : "div");
   card.className = "team-card";
+  if (member.url) {
+    card.href = member.url;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+  }
   card.innerHTML = `
     <div class="team-image-wrapper">
       <img src="${basePath + member.image}" alt="${member.name}">
