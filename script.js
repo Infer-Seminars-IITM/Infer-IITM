@@ -190,3 +190,19 @@ document.getElementById("seminarModal").addEventListener("click", closeModal);
 document.querySelector(".modal-content").addEventListener("click", e => {
   e.stopPropagation();
 });
+
+// Ensure hash navigation (e.g., #seminars) scrolls after content loads
+function scrollToHash() {
+  const id = window.location.hash ? window.location.hash.slice(1) : "";
+  if (!id) return;
+  const target = document.getElementById(id);
+  if (target) {
+    // slight delay to allow layout/render to settle
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  }
+}
+
+window.addEventListener("load", scrollToHash);
+window.addEventListener("hashchange", scrollToHash);
