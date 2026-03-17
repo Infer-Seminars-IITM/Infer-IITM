@@ -37,7 +37,6 @@ function makeCard(member) {
       <img src="${basePath + member.image}" alt="${member.name}">
       <div class="team-overlay">
         <h4>${member.name}</h4>
-        <p>${member.title}</p>
       </div>
     </div>
   `;
