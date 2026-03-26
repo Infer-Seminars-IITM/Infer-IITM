@@ -2,6 +2,23 @@
   "seminars": [
     {
       "id": "1",
+      "name": "Information theoretic data privacy",
+      "short_abstract": "Modern data-driven applications require extracting useful information while preserving the privacy of underlying data. This talk explores several privacy frameworks—predicate, list, distribution, and anticollusion privacy—that address different threat scenarios. Complementing differential privacy, we present methods to precisely characterize the tradeoff between utility and privacy, along with randomized mechanisms to achieve optimal performance. These ideas contribute to designing robust and privacy-preserving computational systems.",
+      "full_content": "Current as well as futuristic data-driven applications entail function computation or recoverability or utility, with accompanying requirements of data privacy. In such applications, a user holding data must publicly furnish attributes of the data (function recoverability or utility) to a server, while protecting the data or the data-generating mechanism (privacy). Variant formulations of function computation with privacy will be described: 'predicate privacy' which requires that data or a separate and sensitive attribute of it be protected; 'list privacy' which guarantees that a protected data value defies even being guessed to lie among a larger group of values; 'distribution privacy' in which the workings of an underlying data-generating algorithm must remain private; and 'anticollusion privacy,' which guards against multiple colluding servers. The concept of differential privacy rules the data privacy landscape. Our approach can be viewed as a complement that enables exact characterizations of optimal utility versus privacy performance tradeoffs, and specifies randomized privacy mechanisms for attaining them. This is a rich and evolving research area that raises many interesting questions. The talk is based on joint work with Ajaykrishnan Nageswaran and Rohit Premlal.",
+
+      "speaker": "Dr. Narayan, Prakash",
+      "profile": "Professor of Electrical and Computer Engineering at University of Maryland, College Park",
+      "photo": "images/seminars/prof2.jpg",
+      "speaker_url": "https://user.eng.umd.edu/~prakash/index.html",
+
+      "date": "2026-04-13T15:30:00",
+      "venue": "Online",
+      "thumbnail": "images/seminars/thumbnail-1.png",
+      "images": ["images/seminars/pdf-1.jpg"],
+      "youtube_url": "https://www.youtube.com/watch/zobzbnH9-YU"
+    },
+    {
+      "id": "2",
       "name": "From Noise To Data: A Tutorial On Diffusion Models",
       "short_abstract": "Diffusion models are a powerful generative framework that transforms complex data into simple distributions through a forward noise process and generates data via a learned reverse denoising process. This tutorial presents a first-principles introduction to discrete-time diffusion models, covering training objectives, parameterization, and sampling methods. It emphasizes intuition and theoretical connections to equip readers to critically engage with current research and applications.",
       "full_content": "Diffusion models have recently emerged as a powerful and unifying framework for generative modeling, achieving state-of-the-art performance across a wide range of domains including images, audio, and structured signals. This tutorial offers a systematic introduction to diffusion models, developed from first principles and requiring only a basic background in probability and estimation. We begin by describing the forward process which transforms complex data distributions into simple reference distributions, such as a Gaussian, through a sequence of noise-injection steps. Generative modeling is described as the reverse diffusion process implemented as a sequence of denoising operations.\n\n The tutorial focuses on discrete-time diffusion models and their algorithmic realization, including training objectives, parameterization choices, and sampling procedures. Throughout, we emphasize intuition, modeling assumptions, and computational considerations, and draw connections to classical ideas in estimation theory and probability. The aim is to equip students with a clear conceptual understanding of diffusion models, enabling them to read current literature critically and apply these ideas to new scientific and engineering problems.",
