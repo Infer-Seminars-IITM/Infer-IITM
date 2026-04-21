@@ -55,7 +55,10 @@ function renderSeminars(list = []) {
           <img src="${basePath + seminar.photo}" class="speaker-photo" alt="${seminar.speaker}" loading="lazy">
         </a>
         <div class="card-speaker">${seminar.speaker}</div>
-        ${seminar.youtube_url ? `<a class="youtube-cta" href="${seminar.youtube_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">▶</a>` : ""}
+        <div class="card-actions">
+          ${seminar.youtube_url ? `<a class="youtube-cta" href="${seminar.youtube_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="Watch">▶</a>` : ""}
+          ${seminar.notes_url ? `<a class="notes-cta" href="${seminar.notes_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="View Notes">📄</a>` : ""}
+        </div>
       </div>
     `;
 
