@@ -2,7 +2,7 @@
   "seminars": [
     {
       "id": "1",
-      "name": "GROUP TESTING: SOMETHING OLD, SOMETHING NEW, SOMETHING BORROWED",
+      "name": "Group Testing: Something old, Something new, Something borrowed",
       "short_abstract": "Group testing is a technique for identifying defective items in large populations using a minimal number of pooled tests. By interpreting simple positive or negative outcomes, defects can be located efficiently. The approach is widely used in areas such as healthcare, communications, and network analysis. Cascaded group testing extends this idea by using ordered tests to identify the first defective item, improving efficiency.",
       "full_content": "The problem of group testing entails inferring a subset of defective items from a (much larger) population, using as few 'pooled tests' as possible. Each pooled test specifies a subset of the items and produces a binary outcome: 'negative' if all the items selected in the test are non-defective, and 'positive' otherwise. While the original motivation for group testing was medical testing, it has since found application across a wide variety of scenarios including wireless communications, DNA sequencing, neighbour discovery, and network tomography. We review some of the main results in group testing and then introduce a new variation of the problem ('cascaded group testing') where each test is specified by an ordered subset of items, and returns the first defective item in the specified order.",
 

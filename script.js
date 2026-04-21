@@ -157,6 +157,12 @@ fetch(basePath + "data/seminars.json")
 
     // seminar cards
     seminarsData = data.seminars;
+    seminarsData.forEach(seminar => { // reading data into cache in idle time 
+      seminar.images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    });
     renderSeminars(seminarsData);
     if (searchInput) {
       searchInput.addEventListener("input", applySearch);
@@ -174,6 +180,7 @@ function openModal(seminar) {
 
   seminar.images.forEach(src => {
     const img = document.createElement("img");
+    img.loading = "lazy"; //load progressively instead of blocking
     img.src = src;
     pdfScroll.appendChild(img);
   });
