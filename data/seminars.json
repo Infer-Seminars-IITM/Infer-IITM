@@ -2,6 +2,23 @@
   "seminars": [
     {
       "id": "1",
+      "name": "Toward improving LLM English perplexity",
+      "short_abstract": " Over the past decade there has been a significant effort to improve Large Language Models (LLMs) performance. The fundamental aspect of training LLMs is next-word prediction over a large corpus as measured by the resulting perplexity. Models with lower perplexity consistently improve performance across a variety of downstream tasks including reasoning, coding, and question-answering. In this talk we review existing perplexity-reduction approaches, and show how information-theoretic, syntactical, statistical, and diversification-based techniques may help further reduce LLM perplexity for the common WikiText-103 benchmark.  Based on Joint work with Esen Ergun.",
+      "full_content": " Over the past decade there has been a significant effort to improve Large Language Models (LLMs) performance. The fundamental aspect of training LLMs is next-word prediction over a large corpus as measured by the resulting perplexity. Models with lower perplexity consistently improve performance across a variety of downstream tasks including reasoning, coding, and question-answering. In this talk we review existing perplexity-reduction approaches, and show how information-theoretic, syntactical, statistical, and diversification-based techniques may help further reduce LLM perplexity for the common WikiText-103 benchmark.  Based on Joint work with Esen Ergun.",
+
+      "speaker": "Dr. Alon Orlitsky",
+      "profile": "Professor, ECE and CSE, UCSD",
+      "photo": "images/seminars/prof4.jpg",
+      "speaker_url": "https://jacobsschool.ucsd.edu/faculty/profile?id=54",
+
+      "date": "2026-05-04T11:00:00",
+      "venue": "Online",
+      "thumbnail": "images/seminars/thumbnail-4.png",
+      "images": ["images/seminars/pdf-4.jpg"],
+      "youtube_url": "https://www.youtube.com/live/RiQyP5c2p3I"
+    },
+    {
+      "id": "2",
       "name": "Group Testing: Something old, Something new, Something borrowed",
       "short_abstract": "Group testing is a technique for identifying defective items in large populations using a minimal number of pooled tests. By interpreting simple positive or negative outcomes, defects can be located efficiently. The approach is widely used in areas such as healthcare, communications, and network analysis. Cascaded group testing extends this idea by using ordered tests to identify the first defective item, improving efficiency.",
       "full_content": "The problem of group testing entails inferring a subset of defective items from a (much larger) population, using as few 'pooled tests' as possible. Each pooled test specifies a subset of the items and produces a binary outcome: 'negative' if all the items selected in the test are non-defective, and 'positive' otherwise. While the original motivation for group testing was medical testing, it has since found application across a wide variety of scenarios including wireless communications, DNA sequencing, neighbour discovery, and network tomography. We review some of the main results in group testing and then introduce a new variation of the problem ('cascaded group testing') where each test is specified by an ordered subset of items, and returns the first defective item in the specified order.",
@@ -18,7 +35,7 @@
       "youtube_url": "https://www.youtube.com/live/gYKTT4kb-PE"
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "Information theoretic data privacy",
       "short_abstract": "Modern data-driven applications require extracting useful information while preserving the privacy of underlying data. This talk explores several privacy frameworks—predicate, list, distribution, and anticollusion privacy—that address different threat scenarios. Complementing differential privacy, we present methods to precisely characterize the tradeoff between utility and privacy, along with randomized mechanisms to achieve optimal performance. These ideas contribute to designing robust and privacy-preserving computational systems.",
       "full_content": "Current as well as futuristic data-driven applications entail function computation or recoverability or utility, with accompanying requirements of data privacy. In such applications, a user holding data must publicly furnish attributes of the data (function recoverability or utility) to a server, while protecting the data or the data-generating mechanism (privacy). Variant formulations of function computation with privacy will be described: 'predicate privacy' which requires that data or a separate and sensitive attribute of it be protected; 'list privacy' which guarantees that a protected data value defies even being guessed to lie among a larger group of values; 'distribution privacy' in which the workings of an underlying data-generating algorithm must remain private; and 'anticollusion privacy,' which guards against multiple colluding servers. The concept of differential privacy rules the data privacy landscape. Our approach can be viewed as a complement that enables exact characterizations of optimal utility versus privacy performance tradeoffs, and specifies randomized privacy mechanisms for attaining them. This is a rich and evolving research area that raises many interesting questions. The talk is based on joint work with Ajaykrishnan Nageswaran and Rohit Premlal.",
@@ -36,7 +53,7 @@
       "notes_url": "images/notes/lecture-notes-2.pdf"
     },
     {
-      "id": "3",
+      "id": "4",
       "name": "From Noise To Data: A Tutorial On Diffusion Models",
       "short_abstract": "Diffusion models are a powerful generative framework that transforms complex data into simple distributions through a forward noise process and generates data via a learned reverse denoising process. This tutorial presents a first-principles introduction to discrete-time diffusion models, covering training objectives, parameterization, and sampling methods. It emphasizes intuition and theoretical connections to equip readers to critically engage with current research and applications.",
       "full_content": "Diffusion models have recently emerged as a powerful and unifying framework for generative modeling, achieving state-of-the-art performance across a wide range of domains including images, audio, and structured signals. This tutorial offers a systematic introduction to diffusion models, developed from first principles and requiring only a basic background in probability and estimation. We begin by describing the forward process which transforms complex data distributions into simple reference distributions, such as a Gaussian, through a sequence of noise-injection steps. Generative modeling is described as the reverse diffusion process implemented as a sequence of denoising operations.\n\n The tutorial focuses on discrete-time diffusion models and their algorithmic realization, including training objectives, parameterization choices, and sampling procedures. Throughout, we emphasize intuition, modeling assumptions, and computational considerations, and draw connections to classical ideas in estimation theory and probability. The aim is to equip students with a clear conceptual understanding of diffusion models, enabling them to read current literature critically and apply these ideas to new scientific and engineering problems.",

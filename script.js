@@ -119,6 +119,8 @@ fetch(basePath + "data/seminars.json")
             <strong>${featured.speaker}</strong>
             <div class="featured-meta">
               ${featured.profile}
+            </div>
+            <div class="featured-meta">
               ${new Date(featured.date).toLocaleString()} · ${featured.venue}
             </div>
           </div>
