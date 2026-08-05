@@ -15,7 +15,8 @@
       "venue": "Online",
       "thumbnail": "images/seminars/thumbnail-6.png",
       "images": ["images/seminars/pdf-6.jpg"],
-      "youtube_url": " https://youtube.com/live/B28GeSURgtQ"
+      "youtube_url": " https://youtube.com/live/B28GeSURgtQ",
+      "notes_url": "images/notes/lecture-notes-6.pdf"
     },
     {
       "id": "2",
